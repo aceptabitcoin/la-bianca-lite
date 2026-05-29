@@ -3,16 +3,24 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 44, 36, 25; /* Cafe */
-  --background-start-rgb: 250, 247, 242; /* Crema */
+  --foreground-rgb: 44, 36, 25; /* Café Profundo */
+  --background-start-rgb: 250, 247, 242; /* Crema Cálida */
   --background-end-rgb: 250, 247, 242;
+  
+  /* Nuevos colores del design system v1.1 */
+  --terracota: 224, 122, 95;
+  --verde-selva: 61, 90, 81;
+  --dorado: 212, 175, 55;
+  --amber-salsa: 255, 179, 71;
+  --rosa-guayaba: 255, 107, 158;
+  --purpura-profundo: 107, 63, 160;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 15, 15, 30; /* Azul Noche */
-    --background-end-rgb: 15, 15, 30;
+    --background-start-rgb: 18, 18, 26; /* Azul Medianoche (más cálido) */
+    --background-end-rgb: 18, 18, 26;
   }
 }
 
@@ -25,11 +33,12 @@ body {
     )
     rgb(var(--background-start-rgb));
   font-family: var(--font-montserrat), sans-serif;
-  overflow-x: hidden; /* Evita scroll horizontal accidental */
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.2s ease;
 }
 
 /* =========================================
-   ANIMACIONES TROPICAL LUXE
+   ANIMACIONES TROPICAL LUXE (Mantenidas)
    ========================================= */
 
 /* 1. Vapor del Horno (Steam Rise) */
@@ -58,16 +67,16 @@ body {
   transform-origin: bottom center;
 }
 
-/* 3. Pulso Lightning (Lightning Pulse) */
-@keyframes lightning-pulse {
-  0%, 95% { opacity: 0.5; filter: brightness(1); }
-  5%, 10% { opacity: 1; filter: brightness(2); box-shadow: 0 0 15px #00F5D4; }
+/* 3. Pulso Lightning (Actualizado a Salsa Shine) */
+@keyframes salsa-shine {
+  0%, 95% { opacity: 0.6; filter: brightness(1); }
+  5%, 10% { opacity: 1; filter: brightness(1.8); box-shadow: 0 0 15px #FFB347; }
 }
-.lightning-pulse {
-  animation: lightning-pulse 3s infinite;
+.salsa-shine {
+  animation: salsa-shine 3s infinite;
 }
 
-/* 4. Gradiente Rotatorio (Gradient Rotate) */
+/* 4. Gradiente Rotatorio (Mantenido) */
 @keyframes gradient-rotate {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -78,19 +87,100 @@ body {
   animation: gradient-rotate 4s ease infinite;
 }
 
+/* 5. Pulso Suave para QR (Nuevo) */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+.pulse-slow {
+  animation: pulse-slow 2s ease-in-out infinite;
+}
+
 /* =========================================
-   UTILIDADES VISUALES
+   UTILIDADES VISUALES (Actualizadas v1.1)
    ========================================= */
 
-/* Glassmorphism Tropical Luxe */
+/* Glassmorphism Tropical Salsa */
 .glass-card-day {
-  @apply bg-white/90 backdrop-blur-md border border-terracota/30 shadow-lg;
+  @apply bg-white/80 backdrop-blur-md border border-terracota/20 shadow-lg;
 }
 .glass-card-night {
-  @apply bg-[#0F0F1E]/95 backdrop-blur-xl border border-neon-cian/40 shadow-[0_0_20px_rgba(0,245,212,0.15)];
+  @apply bg-[#1A1A24]/90 backdrop-blur-xl border border-amber-salsa/30 shadow-[0_0_20px_rgba(255,179,71,0.15)];
 }
 
-/* Overlays de Textura */
+/* Componente: Sede Selector */
+.sede-card {
+  background: rgba(224, 122, 95, 0.08);
+  border-left: 4px solid rgb(var(--dorado));
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+.sede-card:hover {
+  background: rgba(224, 122, 95, 0.15);
+  transform: translateX(6px);
+  border-left-width: 6px;
+}
+.sede-card.active {
+  background: rgba(224, 122, 95, 0.2);
+  border-left-color: rgb(var(--terracota));
+}
+.dark .sede-card {
+  background: rgba(255, 179, 71, 0.08);
+  border-left-color: rgb(var(--amber-salsa));
+}
+.dark .sede-card:hover {
+  background: rgba(255, 179, 71, 0.15);
+}
+.dark .sede-card.active {
+  background: rgba(255, 179, 71, 0.2);
+  border-left-color: rgb(var(--amber-salsa));
+}
+
+/* Badge En Vivo */
+.badge-live {
+  @apply inline-flex items-center gap-2 px-3 py-1 rounded-full font-semibold text-sm;
+  background: rgb(var(--amber-salsa));
+  color: rgb(var(--background-start-rgb));
+  animation: pulse-slow 2s ease-in-out infinite;
+}
+.dark .badge-live {
+  box-shadow: 0 0 12px rgba(255, 179, 71, 0.5);
+}
+
+/* Badge Bitcoin Accepted */
+.badge-bitcoin {
+  @apply inline-flex items-center gap-2 px-3 py-1 rounded-full font-semibold text-sm;
+  background: rgb(var(--verde-selva));
+  color: white;
+}
+.dark .badge-bitcoin {
+  border: 1px solid rgb(var(--amber-salsa));
+  box-shadow: 0 0 8px rgba(255, 179, 71, 0.3);
+}
+
+/* QR Container */
+.qr-container {
+  @apply bg-white p-4 rounded-xl shadow-lg max-w-[180px];
+  border: 2px solid rgb(var(--dorado));
+}
+.dark .qr-container {
+  border-color: rgb(var(--amber-salsa));
+  box-shadow: 0 0 20px rgba(255, 179, 71, 0.2);
+}
+
+/* Wallet Address */
+.wallet-address {
+  font-family: var(--font-space-grotesk), monospace;
+  font-size: 0.75rem;
+  word-break: break-all;
+  user-select: all;
+  @apply bg-gray-100 p-2 rounded text-gray-800;
+}
+.dark .wallet-address {
+  @apply bg-gray-900 text-gray-200;
+}
+
+/* Overlays de Textura (Mantenidos) */
 .palm-overlay {
   background-image: url('/textures/palm-pattern.svg');
   background-repeat: repeat;
@@ -112,16 +202,44 @@ body {
   pointer-events: none;
 }
 
-/* Scrollbar personalizada sutil */
+/* Scrollbar personalizada (Actualizada con nuevos colores) */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {
-  background: #E07A5F; /* Terracota */
+  background: rgb(var(--terracota));
   border-radius: 4px;
 }
-.dark ::-webkit-scrollbar-thumb { background: #00F5D4; /* Neon Cian */ }
-::-webkit-scrollbar-thumb:hover { background: #D4AF37; /* Dorado */ }
+.dark ::-webkit-scrollbar-thumb { background: rgb(var(--amber-salsa)); }
+::-webkit-scrollbar-thumb:hover { background: rgb(var(--dorado)); }
 
-/* Selection styles (moved from layout to avoid hydration issues) */
-::selection { background: #E07A5F; color: white; }
-.dark ::selection { background: #00F5D4; color: #0F0F1E; }
+/* Selection styles */
+::selection { background: rgb(var(--terracota)); color: white; }
+.dark ::selection { background: rgb(var(--amber-salsa)); color: rgb(var(--background-start-rgb)); }
+
+/* =========================================
+   UTILIDADES ADICIONALES
+   ========================================= */
+
+/* Reducción de movimiento para accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .steam-particle,
+  .palm-decoration,
+  .salsa-shine,
+  .animate-gradient-rotate,
+  .pulse-slow,
+  .badge-live {
+    animation: none !important;
+  }
+  .sede-card {
+    transition: none !important;
+  }
+}
+
+/* Focus visible (accesibilidad) */
+*:focus-visible {
+  outline: 2px solid rgb(var(--amber-salsa));
+  outline-offset: 4px;
+}
+.dark *:focus-visible {
+  outline-color: rgb(var(--amber-salsa));
+}

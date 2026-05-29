@@ -13,7 +13,7 @@ Landing page for Bianca's baking classes.
 ## Directory Structure
 - /app: Root layout, main page, and providers (theme).
 - /components: Reusable UI components.
-  - /landing: Landing page sections (HeroSection, BookingSection, BitcoinQR, TrustBadge, LightningQR, etc.)
+  - /landing: Landing page sections (HeroSection, BookingSection, LightningQR, TrustBadge, etc.)
   - /ui: Shared UI components (ArcadeButton)
   - /layout: Layout components (Footer)
 - /public: Static assets.
