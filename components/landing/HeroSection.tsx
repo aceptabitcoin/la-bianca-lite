@@ -110,32 +110,36 @@ export function HeroSection() {
           transition={{ delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-4 sm:px-0"
         >
-          <ArcadeButton 
-            onClick={() => {
-              const menuSection = document.getElementById('menu');
-              if (menuSection) menuSection.scrollIntoView({ behavior: 'smooth' });
-            }}
-          >
-            📖 Ver Menú
-          </ArcadeButton>
+           <ArcadeButton 
+             onClick={() => {
+               if (typeof window !== 'undefined') {
+                 const menuSection = document.getElementById('menu');
+                 if (menuSection) menuSection.scrollIntoView({ behavior: 'smooth' });
+               }
+             }}
+           >
+             📖 Ver Menú
+           </ArcadeButton>
           
-          {/* BOTÓN SECUNDARIO OPTIMIZADO PARA CONTRASTE */}
-          <button
-            onClick={() => {
-              const carteleraSection = document.getElementById('cartelera');
-              if (carteleraSection) carteleraSection.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="group relative px-6 py-3 rounded-full border-2 border-[#E07A5F] text-[#E07A5F] 
-                       dark:border-[#FFB347] dark:text-[#FFB347] 
-                       bg-white/10 dark:bg-[#1A1A24]/50
-                       hover:bg-[#E07A5F] hover:text-white dark:hover:bg-[#FFB347] dark:hover:text-[#12121A]
-                       shadow-[0_4px_12px_rgba(224,122,95,0.15)] dark:shadow-[0_0_12px_rgba(255,179,71,0.2)]
-                       backdrop-blur-sm transition-all duration-300 font-inter font-bold text-sm tracking-wide uppercase"
-          >
-            <span className="relative z-10">🎵 Ver Cartelera</span>
-            {/* Efecto de brillo sutil al hover */}
-            <div className="absolute inset-0 rounded-full bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </button>
+           {/* BOTÓN SECUNDARIO OPTIMIZADO PARA CONTRASTE */}
+           <button
+             onClick={() => {
+               if (typeof window !== 'undefined') {
+                 const carteleraSection = document.getElementById('cartelera');
+                 if (carteleraSection) carteleraSection.scrollIntoView({ behavior: 'smooth' });
+               }
+             }}
+             className="group relative px-6 py-3 rounded-full border-2 border-[#E07A5F] text-[#E07A5F] 
+                        dark:border-[#FFB347] dark:text-[#FFB347] 
+                        bg-white/10 dark:bg-[#1A1A24]/50
+                        hover:bg-[#E07A5F] hover:text-white dark:hover:bg-[#FFB347] dark:hover:text-[#12121A]
+                        shadow-[0_4px_12px_rgba(224,122,95,0.15)] dark:shadow-[0_0_12px_rgba(255,179,71,0.2)]
+                        backdrop-blur-sm transition-all duration-300 font-inter font-bold text-sm tracking-wide uppercase"
+           >
+             <span className="relative z-10">🎵 Ver Cartelera</span>
+             {/* Efecto de brillo sutil al hover */}
+             <div className="absolute inset-0 rounded-full bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+           </button>
         </motion.div>
 
       </div>

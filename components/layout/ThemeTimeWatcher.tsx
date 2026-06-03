@@ -10,8 +10,8 @@ export function ThemeTimeWatcher() {
     const MANUAL_OVERRIDE_KEY = "la-bianca-theme-manual-override";
     
     const checkTimeAndSetTheme = () => {
-      // Respetar override manual
-      if (localStorage.getItem(MANUAL_OVERRIDE_KEY) === "true") return;
+      // Respetar override manual - solo si estamos en el cliente
+      if (typeof window !== 'undefined' && localStorage.getItem(MANUAL_OVERRIDE_KEY) === "true") return;
 
       const now = new Date();
       const currentMinutesInDay = now.getHours() * 60 + now.getMinutes();
@@ -28,10 +28,13 @@ export function ThemeTimeWatcher() {
     };
 
     // Ejecutar al montar (para capturar cambios de hora si la pestaña lleva mucho abierta)
-    checkTimeAndSetTheme();
+    // Solo si estamos en el cliente
+    if (typeof window !== 'undefined') {
+      checkTimeAndSetTheme();
 
-    const interval = setInterval(checkTimeAndSetTheme, 30000);
-    return () => clearInterval(interval);
+      const interval = setInterval(checkTimeAndSetTheme, 30000);
+      return () => clearInterval(interval);
+    }
   }, [setTheme, resolvedTheme]);
 
   return null;
