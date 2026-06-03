@@ -4,38 +4,35 @@ import { useEffect } from "react";
 import { useTheme } from "next-themes";
 
 export function ThemeTimeWatcher() {
-  const { setTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
 
   useEffect(() => {
+    const MANUAL_OVERRIDE_KEY = "la-bianca-theme-manual-override";
+    
     const checkTimeAndSetTheme = () => {
-      const now = new Date();
-      const hours = now.getHours();
-      const minutes = now.getMinutes();
-      
-      // Convertimos la hora actual a minutos transcurridos en el día
-      const currentMinutesInDay = hours * 60 + minutes;
-      
-      // 18:30 hrs según tu DESIGN_SYSTEM.md (18 * 60 + 30 = 1110 minutos)
-      const sunsetMinutes = 18 * 60 + 30; 
-      
-      // Definimos las 6:00 AM como la hora en la que amanece y vuelve el mood mediterráneo
-      const sunriseMinutes = 6 * 60;       
+      // Respetar override manual
+      if (localStorage.getItem(MANUAL_OVERRIDE_KEY) === "true") return;
 
-      // Si la hora actual es igual o mayor a las 18:30 o menor a las 6:00 AM -> MODO NOCHE ("dark")
-      if (currentMinutesInDay >= sunsetMinutes || currentMinutesInDay < sunriseMinutes) {
-        setTheme("dark");
-      } else {
-        setTheme("light");
+      const now = new Date();
+      const currentMinutesInDay = now.getHours() * 60 + now.getMinutes();
+      const sunsetMinutes = 18 * 60 + 30;
+      const sunriseMinutes = 6 * 60;
+      
+      const shouldBeDark = currentMinutesInDay >= sunsetMinutes || currentMinutesInDay < sunriseMinutes;
+      const targetTheme = shouldBeDark ? "dark" : "light";
+
+      // Solo actualizar si difiere del tema resuelto actual
+      if (resolvedTheme !== targetTheme) {
+        setTheme(targetTheme);
       }
     };
 
-    // Se ejecuta de inmediato cuando el usuario entra a la página
+    // Ejecutar al montar (para capturar cambios de hora si la pestaña lleva mucho abierta)
     checkTimeAndSetTheme();
 
-    // Revisa el reloj automáticamente cada 30 segundos por si el usuario deja la página abierta en el cambio de turno
     const interval = setInterval(checkTimeAndSetTheme, 30000);
     return () => clearInterval(interval);
-  }, [setTheme]);
+  }, [setTheme, resolvedTheme]);
 
-  return null; // Este componente no renderiza nada visual, solo opera en el background
+  return null;
 }

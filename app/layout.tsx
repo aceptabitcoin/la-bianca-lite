@@ -10,53 +10,47 @@ import "./globals.css";
 import { Providers } from "./providers";
 import { ThemeTimeWatcher } from "@/components/layout/ThemeTimeWatcher";
 
-const playfair = Playfair_Display({ 
-  subsets: ['latin'], 
-  variable: '--font-playfair',
-  display: 'swap'
-});
-
-const cormorant = Cormorant_Garamond({ 
-  subsets: ['latin'], 
-  variable: '--font-cormorant',
-  weight: ['400'],
-  display: 'swap'
-});
-
-const inter = Inter({
-  subsets: ['latin'], 
-  variable: '--font-inter',
-  display: 'swap'
-});
-
-const spaceGrotesk = Space_Grotesk({ 
-  subsets: ['latin'], 
-  variable: '--font-space-grotesk',
-  display: 'swap'
-});
-
-const anton = Anton({
-  subsets: ['latin'], 
-  variable: '--font-anton',
-  weight: ['400'],
-  display: 'swap'
-});
+// ... tus configuraciones de fuentes (déjalas igual) ...
 
 export const metadata: Metadata = {
   title: "La Bianca Tropical | Bitcoin & Salsa",
   description: "Del horno de leña a la pista de salsa. Aceptamos Bitcoin Lightning.",
-  icons: {
-    icon: '/favicon.ico',
-  },
+  icons: { icon: '/favicon.ico' },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+// ✅ SCRIPT INLINE ANTI-FLASH (Se ejecuta antes de React)
+const themeScript = `
+(function() {
+  try {
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var currentMinutesInDay = hours * 60 + minutes;
+    var sunsetMinutes = 18 * 60 + 30; // 18:30
+    var sunriseMinutes = 6 * 60;      // 06:00
+    
+    var isDark = currentMinutesInDay >= sunsetMinutes || currentMinutesInDay < sunriseMinutes;
+    
+    // Solo aplicar si NO hay override manual guardado
+    var manualOverride = localStorage.getItem('la-bianca-theme-manual-override');
+    if (manualOverride !== 'true') {
+      if (isDark) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    }
+  } catch(e) {}
+})();
+`;
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es" suppressHydrationWarning>
+      <head>
+        {/* ✅ Inyectar script síncrono para evitar FOUC */}
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className={`
         ${playfair.variable} 
         ${cormorant.variable} 
@@ -66,14 +60,10 @@ export default function RootLayout({
         antialiased
       `}>
         <Providers>
+          {/* El watcher ahora solo maneja cambios EN TIEMPO REAL, no el estado inicial */}
           <ThemeTimeWatcher />
           
-          {/* Overlay de textura existente */}
           <div className="fixed inset-0 z-[-1] palm-overlay" aria-hidden="true" />
-          
-          {/* Nuevo: Brick overlay opcional (comentado, descomentar si quieres textura colonial) */}
-          {/* <div className="fixed inset-0 z-[-1] brick-overlay" aria-hidden="true" /> */}
-          
           {children}
         </Providers>
       </body>

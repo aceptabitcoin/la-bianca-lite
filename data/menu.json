@@ -1,223 +1,218 @@
 {
   "secciones": [
     {
-      "id": "entradas",
-      "titulo": "Entradas",
-      "icono": "🥗",
+      "id": "cocteles",
+      "titulo": "COCTELES",
+      "icono": "🍸",
       "items": [
-        {
-          "nombre": "Bruschetta Pomodoro",
-          "descripcion": "Pan artesanal tostado con tomates frescos, albahaca y aceite de oliva extra virgen",
-          "precio": "$8.50",
-          "badges": ["Vegetariano"],
-          "recomendado": true
-        },
-        {
-          "nombre": "Carpaccio di Manzo",
-          "descripcion": "Finas láminas de res con rúcula, parmesano y alcapas marinadas",
-          "precio": "$12.00",
-          "badges": ["Clásico"],
-          "recomendado": true
-        },
-        {
-          "nombre": "Suprema Calamares",
-          "descripcion": "Aros de calamar rebozados con salsa tártara y limón",
-          "precio": "$10.50",
-          "badges": ["Popular"],
-          "recomendado": false
-        }
-        // TODO: Completar con items reales del cliente
+        { "nombre": "Americano", "descripcion": "Vermouth Rojo, Bitter Campari y Agua Mineral, medialuna de naranja o limón", "precio": "$170", "badges": [], "recomendado": false, "subcategoria": "clasicos" },
+        { "nombre": "Aperol Spritz", "descripcion": "Aperol, Prosecco, Agua Mineral, medialuna de naranja", "precio": "$170", "badges": [], "recomendado": false, "subcategoria": "clasicos" },
+        { "nombre": "Campari Shekeado", "descripcion": "Campari bitter, Ginebra, medialuna de naranja", "precio": "$170", "badges": [], "recomendado": false, "subcategoria": "clasicos" },
+        { "nombre": "Campari Spritz", "descripcion": "Campari bitter, Prosecco, Agua Mineral, medialuna de naranja", "precio": "$170", "badges": [], "recomendado": false, "subcategoria": "clasicos" },
+        { "nombre": "Negroni", "descripcion": "Ginebra, Vermouth Rojo y Bitter Campari, medialuna de naranja", "precio": "$190", "badges": ["⭐ Clásico"], "recomendado": true, "subcategoria": "clasicos" },
+        { "nombre": "Negroni Sbagliato", "descripcion": "Vermouth Rojo, Bitter Campari y vino espumoso brut", "precio": "$190", "badges": [], "recomendado": false, "subcategoria": "clasicos" },
+        { "nombre": "Martini Cocktail", "descripcion": "Gin, Martini Extra Dry, Aceitunas o Lemon twist", "precio": "$190", "badges": [], "recomendado": false, "subcategoria": "clasicos" },
+        { "nombre": "Vodka Martini", "descripcion": "Vodka, Martini Extra Dry, Aceitunas o Lemon twist", "precio": "$180", "badges": [], "recomendado": false, "subcategoria": "clasicos" },
+        { "nombre": "Martini Royale", "descripcion": "Martini Bianco, Prosecco, Limón, Hojas de Menta", "precio": "$180", "badges": [], "recomendado": false, "subcategoria": "clasicos" },
+        { "nombre": "Martini Bianco a las Rocas", "descripcion": "Martini Bianco, medialuna de Limón", "precio": "$170", "badges": [], "recomendado": false, "subcategoria": "clasicos" },
+        { "nombre": "Mimosa", "descripcion": "Prosecco, Jugo de Naranja y Maraschino Cherry", "precio": "$130", "badges": [], "recomendado": false, "subcategoria": "clasicos" },
+        { "nombre": "Cosmopolitan", "descripcion": "Vodka, Arándano, Limón y Triple Sec", "precio": "$155", "badges": [], "recomendado": false, "subcategoria": "clasicos" },
+        { "nombre": "Blue Margarita", "descripcion": "Tequila, Blue curaçao, Limón y Sprite", "precio": "$140", "badges": [], "recomendado": false, "subcategoria": "mezcals-tequilas" },
+        { "nombre": "Mezcalita", "descripcion": "Mezcal, Triple Sec, Jarabe Natural, sal de gusano", "precio": "$155", "badges": ["⚡ Ahumado"], "recomendado": true, "subcategoria": "mezcals-tequilas" },
+        { "nombre": "Mezcaloco", "descripcion": "Mezcal, Sprite, fresa y limón", "precio": "$165", "badges": [], "recomendado": false, "subcategoria": "mezcals-tequilas" },
+        { "nombre": "Paloma", "descripcion": "Tequila, Limón y Refresco de Toronja", "precio": "$125", "badges": [], "recomendado": false, "subcategoria": "mezcals-tequilas" },
+        { "nombre": "Mojito", "descripcion": "Ron, Agua Mineral, Limón, Azúcar y Menta", "precio": "$140", "badges": [], "recomendado": false, "subcategoria": "tropicales" },
+        { "nombre": "Margarita", "descripcion": "Tequila, Triple Sec, Jugo de limón, Jarabe natural y Sal", "precio": "$140", "badges": [], "recomendado": false, "subcategoria": "mezcals-tequilas" },
+        { "nombre": "Caipiriña", "descripcion": "Cachaca, Limón y Azúcar (Fresa o Limón)", "precio": "$160", "badges": [], "recomendado": false, "subcategoria": "tropicales" },
+        { "nombre": "Caipiroska", "descripcion": "Vodka, Limón y Azúcar (Fresa o Limón)", "precio": "$150", "badges": [], "recomendado": false, "subcategoria": "tropicales" },
+        { "nombre": "Daiquiri", "descripcion": "Ron y Jarabe Natural (Fresa, Mango o Limón)", "precio": "$130", "badges": [], "recomendado": false, "subcategoria": "tropicales" },
+        { "nombre": "Piña Caribe", "descripcion": "Ron, Blue Curaçao, Crema de Coco, Piña y Canela", "precio": "$165", "badges": [], "recomendado": false, "subcategoria": "tropicales" },
+        { "nombre": "Baileys Colada", "descripcion": "Baileys, Crema de Coco, Cereza Maraschino y Canela", "precio": "$165", "badges": [], "recomendado": false, "subcategoria": "tropicales" },
+        { "nombre": "Piña Colada", "descripcion": "Ron, Crema de Coco, Piña y Canela", "precio": "$145", "badges": [], "recomendado": false, "subcategoria": "tropicales" },
+        { "nombre": "Caipitropical", "descripcion": "Licor de Durazno, Licor de Fresa, Ginger Ale, Limón y Azúcar", "precio": "$155", "badges": [], "recomendado": false, "subcategoria": "tropicales" },
+        { "nombre": "Cantarito", "descripcion": "Tequila, Jugo de Naranja, Jugo de Limón, Squirt", "precio": "$140", "badges": [], "recomendado": false, "subcategoria": "mezcals-tequilas" },
+        { "nombre": "Laguna Blu", "descripcion": "Vodka, Blue curaçao, Sprite", "precio": "$135", "badges": [], "recomendado": false, "subcategoria": "tropicales" },
+        { "nombre": "Long Island Ice Tea", "descripcion": "Vodka, Gin, Ron, Triple Sec, Limón, Jarabe Natural y Coca Cola", "precio": "$175", "badges": ["🔥 Potente"], "recomendado": false, "subcategoria": "clasicos" },
+        { "nombre": "Japanese Ice Tea", "descripcion": "Licor de melón, Ron, Gin, Vodka, Limón, Jarabe Natural", "precio": "$175", "badges": [], "recomendado": false, "subcategoria": "tropicales" },
+        { "nombre": "Planter's Punch", "descripcion": "Ron, Angostura, Limón, Piña, Naranja y Granadina", "precio": "$155", "badges": [], "recomendado": false, "subcategoria": "tropicales" },
+        { "nombre": "Mai Tai", "descripcion": "Ron blanco, Ron añejo, Triple sec, Orchata, Limón, Cereza", "precio": "$155", "badges": [], "recomendado": false, "subcategoria": "tropicales" },
+        { "nombre": "Sex on the Beach", "descripcion": "Vodka, Jugo de Naranja, Licor de Durazno y Granadina", "precio": "$155", "badges": [], "recomendado": false, "subcategoria": "tropicales" },
+        { "nombre": "Black Russian", "descripcion": "Vodka y Kalhua", "precio": "$135", "badges": [], "recomendado": false, "subcategoria": "clasicos" },
+        { "nombre": "Pisco Sour", "descripcion": "Pisco, Limón y Azúcar", "precio": "$165", "badges": [], "recomendado": false, "subcategoria": "clasicos" },
+        { "nombre": "Disaronno Sour", "descripcion": "Licor de almendras, Limón, Cereza, Azúcar", "precio": "$145", "badges": [], "recomendado": false, "subcategoria": "clasicos" },
+        { "nombre": "Moscow Mule", "descripcion": "Vodka, Infusión de jengibre, Jarabe natural, Ginger ale y Limón", "precio": "$155", "badges": [], "recomendado": false, "subcategoria": "clasicos" },
+        { "nombre": "Cubano", "descripcion": "Ron Blanco, Ron Añejo, Coca Cola, Limón y Azúcar", "precio": "$150", "badges": [], "recomendado": false, "subcategoria": "tropicales" },
+        { "nombre": "Cuba Libre", "descripcion": "Ron, Coca Cola, medialuna de Limón", "precio": "$125", "badges": [], "recomendado": false, "subcategoria": "tropicales" },
+        { "nombre": "Old Fashioned", "descripcion": "Bourbon Whiskey, Agua Mineral, Angostura, Azúcar y Cereza", "precio": "$165", "badges": [], "recomendado": false, "subcategoria": "clasicos" },
+        { "nombre": "Tequila Sunrise", "descripcion": "Tequila, Jugo de Naranja y Granadina", "precio": "$125", "badges": [], "recomendado": false, "subcategoria": "mezcals-tequilas" },
+        { "nombre": "Ron Cooler", "descripcion": "Ron Blanco, Ginger Ale, Naranja, Limón y Azúcar", "precio": "$155", "badges": [], "recomendado": false, "subcategoria": "tropicales" },
+        { "nombre": "T-Rex", "descripcion": "Gin, Licor de Menta, Limón, pepino, Sprite y Menta", "precio": "$165", "badges": [], "recomendado": false, "subcategoria": "clasicos" },
+        { "nombre": "Flamingo", "descripcion": "Gin, Licor de Fresa, Mango, Piña, Limón y Granadina", "precio": "$165", "badges": [], "recomendado": false, "subcategoria": "tropicales" }
       ]
     },
     {
-      "id": "pastas",
-      "titulo": "Pastas",
-      "icono": "🍝",
+      "id": "gin-tonics",
+      "titulo": "GIN TONICS",
+      "icono": "🍸",
       "items": [
-        {
-          "nombre": "Lasagna Bolognesa",
-          "descripcion": "Capas de pasta fresca con ragú de carne, bechamel y gratinado de parmesano",
-          "precio": "$14.00",
-          "badges": ["Recomendado", "Clásico"],
-          "recomendado": true
-        },
-        {
-          "nombre": "Penne Arrabbiata",
-          "descripcion": "Penne en salsa de tomates cherry, ajo, guindilla y perejil fresco",
-          "precio": "$11.00",
-          "badges": ["Picante"],
-          "recomendado": false
-        },
-        {
-          "nombre": "Ravioli Ricotta e Spinaci",
-          "descripcion": "Pasta rellena de ricotta y espinacas con mantequilla de salvia",
-          "precio": "$13.50",
-          "badges": ["Vegetariano"],
-          "recomendado": true
-        }
-        // TODO: Completar con items reales del cliente
+        { "nombre": "Gin Larios", "descripcion": "Con agua tónica", "precio": "$125", "badges": [], "recomendado": false },
+        { "nombre": "Beefeater", "descripcion": "Con agua tónica", "precio": "$165", "badges": [], "recomendado": false },
+        { "nombre": "Bombay", "descripcion": "Con agua tónica", "precio": "$175", "badges": [], "recomendado": false },
+        { "nombre": "Tanqueray", "descripcion": "Con agua tónica", "precio": "$175", "badges": [], "recomendado": false },
+        { "nombre": "Bulldog", "descripcion": "Con agua tónica", "precio": "$225", "badges": [], "recomendado": false },
+        { "nombre": "Hendrick's", "descripcion": "Con agua tónica", "precio": "$230", "badges": [], "recomendado": false }
+      ]
+    },
+    {
+      "id": "mocktails",
+      "titulo": "MOCKTAILS",
+      "icono": "🧃",
+      "items": [
+        { "nombre": "Picafresa", "descripcion": "Fresa, jugo de limón, jugo de naranja, escarchado dulce con chamoy", "precio": "$100", "badges": ["🌱 Sin alcohol"], "recomendado": false, "subcategoria": "sin-alcohol" },
+        { "nombre": "Fantasmito", "descripcion": "Jugo de limón, pepino, sprite, hierbabuena", "precio": "$100", "badges": ["🌱 Sin alcohol"], "recomendado": false, "subcategoria": "sin-alcohol" },
+        { "nombre": "Cocomonkey", "descripcion": "Café, miel de maple, crema de coco, leche, coco rallado", "precio": "$100", "badges": ["🌱 Sin alcohol"], "recomendado": false, "subcategoria": "sin-alcohol" },
+        { "nombre": "London Tropical", "descripcion": "Agua tónica, toronja, naranja, piña, limón", "precio": "$100", "badges": ["🌱 Sin alcohol"], "recomendado": false, "subcategoria": "sin-alcohol" },
+        { "nombre": "Explosión Frutal", "descripcion": "Jugo de arándano, mango, piña, naranja, limón, granadina", "precio": "$100", "badges": ["🌱 Sin alcohol"], "recomendado": false, "subcategoria": "sin-alcohol" },
+        { "nombre": "La Bianca", "descripcion": "Jugo de naranja, jugo de cereza, sprite, granadina, cereza", "precio": "$100", "badges": ["🌱 Sin alcohol"], "recomendado": true, "subcategoria": "sin-alcohol" },
+        { "nombre": "Piñada", "descripcion": "Jugo de piña, crema de coco, jarabe natural", "precio": "$100", "badges": [" Sin alcohol"], "recomendado": false, "subcategoria": "sin-alcohol" },
+        { "nombre": "Daiquiri Halls", "descripcion": "Jugo de mango, pulpa de mango, limón, hierbabuena", "precio": "$100", "badges": ["🌱 Sin alcohol"], "recomendado": false, "subcategoria": "sin-alcohol" },
+        { "nombre": "Shirley Temple", "descripcion": "Ginger ale, granadina, jugo de limón, cereza", "precio": "$100", "badges": [" Sin alcohol"], "recomendado": false, "subcategoria": "sin-alcohol" },
+        { "nombre": "Café Dakota", "descripcion": "Café, jarabe de maple, azúcar, leche", "precio": "$100", "badges": ["🌱 Sin alcohol"], "recomendado": false, "subcategoria": "sin-alcohol" },
+        { "nombre": "Mojito Virgen", "descripcion": "Limón, hierbabuena, azúcar, agua mineral", "precio": "$100", "badges": ["🌱 Sin alcohol"], "recomendado": false, "subcategoria": "sin-alcohol" },
+        { "nombre": "Apple Ginger", "descripcion": "Ginger ale, jugo de manzana, jarabe de jengibre, limón", "precio": "$100", "badges": ["🌱 Sin alcohol"], "recomendado": false, "subcategoria": "sin-alcohol" }
+      ]
+    },
+    {
+      "id": "entradas",
+      "titulo": "ENTRADAS",
+      "icono": "",
+      "items": [
+        { "nombre": "Coliflor a la Napolitana", "descripcion": "Coliflor rostizada en horno de leña con labneh y queso Grana Padano DOP", "precio": "$180", "badges": ["🌱 Vegetariano"], "recomendado": false },
+        { "nombre": "Raviolis Fritos", "descripcion": "Raviolis fritos con queso Grana Padano DOP y salsa pomodoro", "precio": "$190", "badges": [], "recomendado": false },
+        { "nombre": "Brusqueta al Pomodoro", "descripcion": "Pan casero en horno de leña con tomate fresco, albahaca y aceite de oliva (6 piezas)", "precio": "$100", "badges": [" Vegano"], "recomendado": true },
+        { "nombre": "Dip de Alcachofas", "descripcion": "Crema de alcachofa, espinaca y queso Grana Padano DOP, con pan a la leña", "precio": "$240", "badges": ["🌱 Vegetariano"], "recomendado": false },
+        { "nombre": "Poro y Calabaza Italiana a la Brasa", "descripcion": "Con salsa labneh, peperoncino, limón, cilantro, menta, con pan a la leña", "precio": "$190", "badges": ["🌱 Vegetariano"], "recomendado": false },
+        { "nombre": "Coccoli, Prosciutto e Ricotta", "descripcion": "Masa de pizza frita toscana con ricotta, jamón serrano, rúgula", "precio": "$190", "badges": [], "recomendado": false },
+        { "nombre": "Bomba Burrata", "descripcion": "Pizza individual: Masa de 180 gr con burrata trufada, queso azul, chorizo pamplona", "precio": "$300", "badges": ["⭐ Recomendado"], "recomendado": true },
+        { "nombre": "Tabla Especial del Chef", "descripcion": "Carnes frías italianas, quesos surtidos, frutas, aceitunas, pan casero", "precio": "$390", "badges": ["👥 Para compartir"], "recomendado": false },
+        { "nombre": "Crostone 4 Quesos con Champiñones", "descripcion": "Pan casero a la leña con salsa de 4 quesos y champiñones (6 piezas)", "precio": "$190", "badges": ["🌱 Vegetariano"], "recomendado": false },
+        { "nombre": "Crostone Queso de Cabra y Gorgonzola", "descripcion": "Pan casero a la leña con queso de cabra, pera, miel, gorgonzola, nuez (6 piezas)", "precio": "$200", "badges": ["🌱 Vegetariano"], "recomendado": false },
+        { "nombre": "Crostone Mixto", "descripcion": "Pan casero a la leña, sabores mixtos (6 piezas)", "precio": "$190", "badges": ["🌱 Vegetariano"], "recomendado": false },
+        { "nombre": "Ceviche de Vegetales", "descripcion": "Con emulsión de ajo rostizado, limón, zanahoria, calabaza, poro, cebolla, tomate, cilantro", "precio": "$230", "badges": ["🌱 Vegano"], "recomendado": false },
+        { "nombre": "Papas Gajo", "descripcion": "Con salsa de 4 quesos", "precio": "$155", "badges": [" Vegetariano"], "recomendado": false }
       ]
     },
     {
       "id": "pizzas",
-      "titulo": "Pizzas",
+      "titulo": "PIZZAS CLÁSICAS",
       "icono": "🍕",
       "items": [
-        {
-          "nombre": "Margherita DOP",
-          "descripcion": "Salsa San Marzano, mozzarella di bufala, albahaca fresca y aceite de oliva",
-          "precio": "$12.00",
-          "badges": ["Vegetariano", "Clásico"],
-          "recomendado": true
-        },
-        {
-          "nombre": "Diavola",
-          "descripcion": "Salami picante, mozzarella, pimientos asados y orégano",
-          "precio": "$14.00",
-          "badges": ["Picante"],
-          "recomendado": false
-        }
-        // TODO: Completar con items reales del cliente
+        { "nombre": "Marinara", "descripcion": "Salsa casera de tomate, ajo, orégano, aceite de oliva, albahaca", "precio": "$180", "badges": ["🌱 Vegano"], "recomendado": false },
+        { "nombre": "Margherita", "descripcion": "Salsa casera de tomate, mozzarella, albahaca fresca", "precio": "$215", "badges": ["🌱 Vegetariano", "⭐ Clásica"], "recomendado": true },
+        { "nombre": "Hawaiana", "descripcion": "Salsa casera de tomate, mozzarella, jamón y piña", "precio": "$260", "badges": [], "recomendado": false },
+        { "nombre": "Jamón Serrano y Champiñones", "descripcion": "Salsa casera de tomate, mozzarella, champiñones y jamón serrano", "precio": "$300", "badges": [], "recomendado": false },
+        { "nombre": "Pepperoni", "descripcion": "Salsa casera de tomate, mozzarella, pepperoni", "precio": "$260", "badges": [], "recomendado": false },
+        { "nombre": "4 Quesos con Champiñones", "descripcion": "Salsa casera de tomate, mozzarella, queso azul, manchego, grana padano y champiñones", "precio": "$270", "badges": ["🌱 Vegetariano"], "recomendado": false },
+        { "nombre": "Calzone Clásico", "descripcion": "Masa de pizza rellena de jamón, salsa de tomate, mozzarella y champiñones", "precio": "$290", "badges": [], "recomendado": false },
+        { "nombre": "Bianca", "descripcion": "Pizza blanca con papa en láminas, cebolla morada, espinacas, salsa de 4 quesos y rúgula", "precio": "$290", "badges": ["🌱 Vegetariano"], "recomendado": false },
+        { "nombre": "Calabrese", "descripcion": "Chorizo italiano fresco, papa confitada con ajo y grana padano", "precio": "$290", "badges": [], "recomendado": false },
+        { "nombre": "Diavola", "descripcion": "Pepperoni, miel de chiles y albahaca", "precio": "$280", "badges": ["🌶️ Picante"], "recomendado": false },
+        { "nombre": "Vegetariana", "descripcion": "Pizza blanca con zucchini curtido, copos de chile, ricotta fresca, ralladura de limón y albahaca", "precio": "$290", "badges": ["🌱 Vegetariana", "️ Picante"], "recomendado": false },
+        { "nombre": "Jamón Serrano y Burrata", "descripcion": "Salsa casera de tomate, mozzarella, jamón serrano y burrata", "precio": "$360", "badges": [], "recomendado": true },
+        { "nombre": "La Bella", "descripcion": "Salsa casera de tomate, mozzarella, jamón serrano y pesto casero de albahaca", "precio": "$330", "badges": [], "recomendado": false },
+        { "nombre": "La Elegante", "descripcion": "Salsa de tomate, mozzarella, gorgonzola, queso de cabra, parmigiano, grana padano y espinacas", "precio": "$280", "badges": ["🌱 Vegetariano"], "recomendado": false },
+        { "nombre": "La Saporita", "descripcion": "Salsa casera de tomate, mozzarella, tocino y queso gorgonzola", "precio": "$290", "badges": [], "recomendado": false }
       ]
     },
     {
-      "id": "cocteles",
-      "titulo": "Cócteles",
-      "icono": "🍹",
+      "id": "pizzas-ninos",
+      "titulo": "PIZZAS PARA NIÑOS",
+      "icono": "🍕",
       "items": [
-        {
-          "nombre": "Mojito Clásico",
-          "descripcion": "Ron blanco, menta fresca, lima, azúcar de caña y soda",
-          "precio": "$9.00",
-          "badges": ["Clásico"],
-          "recomendado": true,
-          "subcategoria": "clasicos"
-        },
-        {
-          "nombre": "Caipirinha",
-          "descripcion": "Cachaça, lima, azúcar y hielo triturado",
-          "precio": "$9.00",
-          "badges": ["Clásico", "Potente"],
-          "recomendado": false,
-          "subcategoria": "clasicos"
-        },
-        {
-          "nombre": "Piña Colada Tropical",
-          "descripcion": "Ron, crema de coco, jugo de piña fresco y un toque de canela",
-          "precio": "$10.00",
-          "badges": ["Tropical", "Dulce"],
-          "recomendado": true,
-          "subcategoria": "tropicales"
-        },
-        {
-          "nombre": "Maracuyá Mambo",
-          "descripcion": "Vodka, puré de maracuyá, jugo de naranja y un splash de granadina",
-          "precio": "$10.50",
-          "badges": ["Tropical", "Refrescante"],
-          "recomendado": false,
-          "subcategoria": "tropicales"
-        },
-        {
-          "nombre": "Mezcal Paloma",
-          "descripcion": "Mezcal joven, jugo de toronja, lima y un toque de sal de gusano",
-          "precio": "$11.00",
-          "badges": ["Mezcal", "Artisanal"],
-          "recomendado": true,
-          "subcategoria": "mezcals-tequilas"
-        },
-        {
-          "nombre": "Tequila Sunrise",
-          "descripcion": "Tequila reposado, jugo de naranja y granadina con hielo",
-          "precio": "$10.00",
-          "badges": ["Tequila", "Colorido"],
-          "recomendado": false,
-          "subcategoria": "mezcals-tequilas"
-        },
-        {
-          "nombre": "Mocktail Maracuyá",
-          "descripcion": "Puré de maracuyá, jugo de piña, ginger ale y menta",
-          "precio": "$7.50",
-          "badges": ["Sin Alcohol", "Refrescante"],
-          "recomendado": false,
-          "subcategoria": "sin-alcohol"
-        },
-        {
-          "nombre": "Virgin Mojito",
-          "descripcion": "Menta fresca, lima, azúcar de caña y soda. Sin alcohol pero con todo el sabor",
-          "precio": "$6.50",
-          "badges": ["Sin Alcohol", "Vegetariano"],
-          "recomendado": true,
-          "subcategoria": "sin-alcohol"
-        }
-        // TODO: Completar con los 44 items reales de cócteles del cliente
+        { "nombre": "Baby Margherita", "descripcion": "Salsa casera de tomate, mozzarella, albahaca fresca", "precio": "$180", "badges": ["👶 Infantil"], "recomendado": false },
+        { "nombre": "Baby Hawaiana", "descripcion": "Salsa casera de tomate, mozzarella, jamón y piña", "precio": "$180", "badges": ["👶 Infantil"], "recomendado": false },
+        { "nombre": "Baby Pepperoni", "descripcion": "Salsa casera de tomate, mozzarella, pepperoni", "precio": "$180", "badges": ["👶 Infantil"], "recomendado": false }
       ]
     },
     {
-      "id": "platos-fuertes",
-      "titulo": "Platos Fuertes",
-      "icono": "🍖",
+      "id": "ensaladas",
+      "titulo": "ENSALADAS",
+      "icono": "🥗",
       "items": [
-        {
-          "nombre": "Ossobuco alla Milanese",
-          "descripcion": "Crujiente por fuera, tierno por dentro. Acompañado de risotto al azafrán",
-          "precio": "$22.00",
-          "badges": ["Recomendado", "Clásico"],
-          "recomendado": true
-        },
-        {
-          "nombre": "Milanesa Napolitana",
-          "descripcion": "Filete de res empanizado con jamón, queso y salsa de tomate",
-          "precio": "$16.00",
-          "badges": ["Popular"],
-          "recomendado": true
-        },
-        {
-          "nombre": "Pollo al Cacciatore",
-          "descripcion": "Pollo salteado con champiñones, pimientos y vino blanco",
-          "precio": "$18.00",
-          "badges": ["Clásico"],
-          "recomendado": false
-        }
-        // TODO: Completar con items reales del cliente
+        { "nombre": "Ensalada La Bianca Tropical", "descripcion": "Lechuga, tocino, perejil, tomate cherry, salsa 4 quesos y almendras caramelizadas", "precio": "$240", "badges": [], "recomendado": true },
+        { "nombre": "César a la Braza con Pollo", "descripcion": "Lechuga ahumada al horno de leña, crutones, aderezo César, Grana Padano y pollo a la plancha", "precio": "$240", "badges": [], "recomendado": false },
+        { "nombre": "Siciliana", "descripcion": "Mix de lechuga, supremas de naranja, tomates deshidratados, aceitunas, cebolla morada y nuez caramelizada", "precio": "$240", "badges": ["🌱 Vegetariano"], "recomendado": false },
+        { "nombre": "Burrata", "descripcion": "Focaccia, burrata entera, jamón serrano, aceite de oliva", "precio": "$250", "badges": [], "recomendado": false }
+      ]
+    },
+    {
+      "id": "pastas",
+      "titulo": "PASTAS",
+      "icono": "🍝",
+      "items": [
+        { "nombre": "Spaghetti a la Puttanesca", "descripcion": "Tomate, alcaparras, aceitunas negras, ajo, peperoncino, aceite de oliva", "precio": "$220", "badges": ["🌱 Vegetariano"], "recomendado": false },
+        { "nombre": "Spaghetti al Ajo, Perejil, Tomate Cherry y Limón", "descripcion": "El chef recomienda extra de camarones (+$100)", "precio": "$200", "badges": ["🌱 Vegetariano"], "recomendado": false },
+        { "nombre": "Raviolis 4 Quesos con Albahaca", "descripcion": "Pasta rellena de ricotta y espinacas, salsa 4 quesos", "precio": "$240", "badges": ["🌱 Vegetariano"], "recomendado": false },
+        { "nombre": "Raviolis a la Boloñesa Tradicional", "descripcion": "Pasta rellena de ricotta y espinacas, salsa boloñesa", "precio": "$240", "badges": [], "recomendado": false },
+        { "nombre": "Lasaña de la Casa", "descripcion": "Láminas de pasta fresca con salsa boloñesa, bechamel y Grana Padano", "precio": "$240", "badges": [], "recomendado": true },
+        { "nombre": "Tagliatelle 4 Quesos", "descripcion": "Nuestra salsa de 4 quesos con champiñones o espinacas", "precio": "$240", "badges": ["🌱 Vegetariano"], "recomendado": false },
+        { "nombre": "Tagliatelle Amatriciana", "descripcion": "Salsa casera de tomate, tocino y cebolla", "precio": "$210", "badges": [], "recomendado": false },
+        { "nombre": "Tagliatelle Jamón Serrano y Champiñones", "descripcion": "Crema de champiñones con jamón serrano", "precio": "$220", "badges": [], "recomendado": false },
+        { "nombre": "Tagliatelle Carbonara", "descripcion": "Crema de yema de huevo y Grana Padano, pancetta crujiente y pimienta negra", "precio": "$220", "badges": [], "recomendado": true },
+        { "nombre": "Tagliatelle Alfredo", "descripcion": "Salsa alfredo casera con tiras de pechuga de pollo a la plancha", "precio": "$230", "badges": [], "recomendado": false },
+        { "nombre": "Tagliatelle Boloñesa Tradicional", "descripcion": "Salsa boloñesa de res a lenta cocción en vino tinto", "precio": "$230", "badges": [], "recomendado": false }
+      ]
+    },
+    {
+      "id": "carnes",
+      "titulo": "CARNE Y PESCADO",
+      "icono": "",
+      "items": [
+        { "nombre": "Picaña al Carbón", "descripcion": "300g de picaña selecta con ensalada verde y verduras salteadas", "precio": "$390", "badges": [], "recomendado": true },
+        { "nombre": "Pulpo a la Brasa", "descripcion": "Pulpo 100% yucateco al carbón con mayonesa de chiles casera y poro rostizado", "precio": "$390", "badges": [], "recomendado": false },
+        { "nombre": "Corazón de Filete de Res", "descripcion": "250g de filete de res 100% angus, vegetales a la parrilla y chimichurri", "precio": "$390", "badges": [], "recomendado": false },
+        { "nombre": "Filete de Salmón Alcaparrado", "descripcion": "220g de salmón a la plancha con alcaparras, hierbas finas y verduras", "precio": "$370", "badges": [], "recomendado": false }
+      ]
+    },
+    {
+      "id": "hamburguesas",
+      "titulo": "HAMBURGUESAS",
+      "icono": "🍔",
+      "items": [
+        { "nombre": "Clásica", "descripcion": "220g de carne 100% angus, tocino, lechuga, tomate, queso, cebolla morada, papas gajo", "precio": "$230", "badges": [], "recomendado": false },
+        { "nombre": "Al Capone", "descripcion": "220g de carne angus, chorizo pamplona, queso mozzarella, pepinillos caseros, rúgula, aderezo italiano, papas gajo", "precio": "$265", "badges": [], "recomendado": true },
+        { "nombre": "Vegana", "descripcion": "Hamburguesa 100% de soya, lechuga, tomate, champiñones, rúgula, cebolla morada, aguacate, papas gajo", "precio": "$225", "badges": ["🌱 Vegano"], "recomendado": false },
+        { "nombre": "Sándwich de Pollo", "descripcion": "Pan chapata, pollo, tocino, espinacas, mayonesa de ajo y queso", "precio": "$225", "badges": [], "recomendado": false },
+        { "nombre": "Sándwich Vegetariano", "descripcion": "Pan chapata, lechuga, tomate, calabaza, zanahoria, champiñones, aguacate, aderezo balsámico", "precio": "$225", "badges": [" Vegetariano"], "recomendado": false },
+        { "nombre": "Gyros de Pollo (2 piezas)", "descripcion": "Pechuga de pollo marinada, pan pita artesanal, salsa labneh", "precio": "$225", "badges": [], "recomendado": false },
+        { "nombre": "Gyros de Soya (2 piezas)", "descripcion": "Albóndigas de soya con salsa labneh, pan pita artesanal", "precio": "$225", "badges": ["🌱 Vegano"], "recomendado": false },
+        { "nombre": "Gyros de Res (2 piezas)", "descripcion": "Carne de res marinada, pan pita artesanal, salsa labneh", "precio": "$245", "badges": [], "recomendado": false }
       ]
     },
     {
       "id": "postres",
-      "titulo": "Postres",
+      "titulo": "POSTRES",
       "icono": "🍰",
       "items": [
-        {
-          "nombre": "Tiramisú Clásico",
-          "descripcion": "Capas de bizcocho café, mascarpone y cacao amargo",
-          "precio": "$8.00",
-          "badges": ["Clásico", "Recomendado"],
-          "recomendado": true
-        },
-        {
-          "nombre": "Panna Cotta",
-          "descripcion": "Nata cuajada con salsa de frutos rojos de temporada",
-          "precio": "$7.50",
-          "badges": ["Vegetariano"],
-          "recomendado": false
-        }
-        // TODO: Completar con items reales del cliente
+        { "nombre": "Tiramisú", "descripcion": "Delicioso tiramisú con queso mascarpone original italiano", "precio": "$155", "badges": [], "recomendado": true },
+        { "nombre": "Tarta de Pera y Gorgonzola", "descripcion": "Tarta de pera con gorgonzola, helado de vainilla, nuez caramelizada y miel", "precio": "$150", "badges": [], "recomendado": false },
+        { "nombre": "Brownie con Gelato", "descripcion": "Brownie casero con bola de helado de vainilla", "precio": "$140", "badges": [], "recomendado": false },
+        { "nombre": "Lemon Pie", "descripcion": "Tarta de limón con pera natural, fresa y azúcar glass", "precio": "$140", "badges": [], "recomendado": false },
+        { "nombre": "Babá al Ron con Crema", "descripcion": "Postre napolitano bañado en jarabe de cítricos y ron blanco, con crema batida", "precio": "$160", "badges": [], "recomendado": false }
       ]
     },
     {
-      "id": "bebidas",
-      "titulo": "Bebidas",
-      "icono": "🥤",
+      "id": "vinos",
+      "titulo": "VINOS",
+      "icono": "",
       "items": [
-        {
-          "nombre": "Limonada de la Casa",
-          "descripcion": "Limones frescos, menta y un toque de jengibre",
-          "precio": "$4.00",
-          "badges": ["Sin Alcohol", "Refrescante"],
-          "recomendado": false
-        }
-        // TODO: Completar con items reales del cliente
+        { "nombre": "Vino Tinto de la Casa", "descripcion": "Copa", "precio": "$110", "badges": [], "recomendado": false },
+        { "nombre": "Vino Blanco de la Casa", "descripcion": "Copa", "precio": "$110", "badges": [], "recomendado": false },
+        { "nombre": "Vino Espumoso Brut de la Casa", "descripcion": "Copa", "precio": "$130", "badges": [], "recomendado": false },
+        { "nombre": "Gaetano D'Aquino Merlot", "descripcion": "Botella", "precio": "$650", "badges": [], "recomendado": false },
+        { "nombre": "Gaetano D'Aquino Chardonnay", "descripcion": "Botella", "precio": "$650", "badges": [], "recomendado": false },
+        { "nombre": "Prosecco Zonin", "descripcion": "Botella", "precio": "$550", "badges": [], "recomendado": false }
       ]
     }
-    // TODO: Agregar más categorías según el menú real del restaurante
   ]
 }
