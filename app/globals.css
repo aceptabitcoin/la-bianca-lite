@@ -258,3 +258,15 @@ body {
   outline: 2px solid rgb(var(--amber-salsa));
   outline-offset: 4px;
 }
+
+/* 6. Bombillitas Marquee (Chase Bulbs) */
+@keyframes bulb-chase {
+  0%, 100% { 
+    opacity: 0.3; 
+    box-shadow: 0 0 2px rgba(212, 175, 55, 0.4);
+  }
+  50% { 
+    opacity: 1; 
+    box-shadow: 0 0 10px rgba(212, 175, 55, 1), 0 0 20px rgba(212, 175, 55, 0.6);
+  }
+}

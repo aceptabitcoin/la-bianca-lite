@@ -8,32 +8,40 @@ import { TrustBadge } from "@/components/landing/TrustBadge";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppFloat } from "@/components/ui/whatsapp-float";
 import { PagaAquiFloat } from "@/components/ui/paga-aqui-float";
+import { EventMarquee } from "@/components/sections/EventMarquee"; // ⚡ NUEVO
+import { EventFeature } from "@/components/sections/EventFeature"; // ⚡ NUEVO
 
 export default function Home() {
   return (
     <main className="flex flex-col min-h-screen bg-[#FAF7F2] dark:bg-[#12121A] transition-colors duration-500">
       <Navbar />
       
-      {/* 1. Hero: La primera impresión */}
+      {/* 1. Hero */}
       <HeroSection />
       
-      {/* 2. Menú: Donde aterriza el comensal al hacer scroll */}
+      {/* 2. ⚡ MARQUESINA: Evento especial (gancho visual) */}
+      <EventMarquee />
+      
+      {/* 3. Menú */}
       <MenuSection /> 
       
-      {/* 3. Booking: Conversión inmediata después de ver el menú */}
+      {/* 4. Booking (Telegram Bot) */}
       <BookingSection />
       
-      {/* 4. Cartelera: Entretenimiento nocturno */}
+      {/* 5. ⚡ EVENTO: Sección dedicada Bull Bitcoin Tour */}
+      <EventFeature />
+      
+      {/* 6. Cartelera semanal */}
       <Cartelera />
       
-      {/* 5. Lightning QR: Pago crypto nativo */}
+      {/* 7. Pagos */}
       <LightningQR />
       
-      {/* 6. Trust & Footer: Cierre de confianza */}
+      {/* 8. Trust & Footer */}
       <TrustBadge />
       <Footer />
       
-      {/* Botones Flotantes */}
+      {/* Flotantes */}
       <PagaAquiFloat />
       <WhatsAppFloat />
     </main>

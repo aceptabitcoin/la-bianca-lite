@@ -75,9 +75,9 @@ export function Footer() {
               </motion.a>
 
               <TutorialButton
-                title="¿Cómo pagar con Bitcoin?"
-                subtitle="Mini Tutorial"
-                href="https://www.youtube.com/watch?v=TdNnGQ4kZzQ"
+                title="Aprende con Bull Bitcoin"
+                subtitle="Tutorial Oficial del Partner"
+                href="https://www.youtube.com/watch?v=la0WnXwyI8c"
               />
 
               {/* Firma de Desarrollador */}
